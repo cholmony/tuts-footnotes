@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Footnotes Shortcode (by Tuts+ Code)
- * Plugin URI: http://**GITHUB_REPO**
+ * Plugin URI: https://github.com/barisunver/tuts-footnotes/
  * Description: A simple plugin utilizing shortcodes and custom fields to create footnotes in your articles.
  * Version: 1.0
  * Author: Baris Unver
@@ -24,7 +24,7 @@ function footnotes_sc( $atts ) {
 
 add_shortcode( 'ref', 'footnotes_sc' );
 
-function make_footnotes( $title = 'Footnotes', $titletag = 'h3', $listtag = 'ol' ) {
+function make_footnotes( $title = __( 'Footnotes' ), $titletag = 'h3', $listtag = 'ol' ) {
 
 	$footnotes_array = array();
 	
