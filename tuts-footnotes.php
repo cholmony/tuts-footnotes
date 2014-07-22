@@ -24,7 +24,7 @@ function footnotes_sc( $atts ) {
 
 add_shortcode( 'ref', 'footnotes_sc' );
 
-function print_footnotes( $title = 'Footnotes', $titletag = 'h3', $listtag = 'ol' ) {
+function make_footnotes( $title = 'Footnotes', $titletag = 'h3', $listtag = 'ol' ) {
 
 	$footnotes_array = array();
 	
@@ -56,9 +56,11 @@ function print_footnotes( $title = 'Footnotes', $titletag = 'h3', $listtag = 'ol
 	
 }
 
-function print_footnotes_filter( $content ) {
-	$content .= print_footnotes();
+function print_footnotes( $content ) {
+	$content .= make_footnotes();
 	return $content;
 }
 
-add_filter( 'the_content', 'print_footnotes_filter' );
+add_filter( 'the_content', 'print_footnotes' );
+
+?>
