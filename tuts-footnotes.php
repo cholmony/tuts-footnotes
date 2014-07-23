@@ -18,7 +18,7 @@ function footnotes_sc( $atts ) {
 		), $atts )
 	);
 
-    return '<a href="#ref-' . $id . '"><sup>[' . $id . ']</sup></a>';
+    return '<a href="#ref-' . $id . '" rel="footnote"><sup>[' . $id . ']</sup></a>';
 	
 }
 
