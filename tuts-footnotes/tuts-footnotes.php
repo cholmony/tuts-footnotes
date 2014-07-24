@@ -53,7 +53,7 @@ function make_footnotes( $title = '', $titletag = 'h3', $listtag = 'ol' ) {
 		$output .= '</div>';
 	}
 	
-	if( is_singular() )
+	if( is_singular() && is_main_query() )
 		return $output;
 	
 }
